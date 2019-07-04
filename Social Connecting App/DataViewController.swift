@@ -13,6 +13,7 @@ class DataViewController: UIViewController {
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
 
+    @IBOutlet var MapObject: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
