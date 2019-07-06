@@ -96,6 +96,7 @@ class cardInfoInput: UIViewController, UITableViewDelegate, UITableViewDataSourc
 //
 //    }
 //
+//
     
     override func viewDidAppear(_ animated: Bool) {
 
