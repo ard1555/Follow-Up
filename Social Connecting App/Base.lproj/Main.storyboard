@@ -282,7 +282,7 @@
                                     <action selector="CreateAccountHandler:" destination="5ud-nV-lau" eventType="touchUpInside" id="ail-yv-lKR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S.M.C.- Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-IN-a8F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FollowUp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-IN-a8F">
                                 <rect key="frame" x="-31.5" y="100" width="438" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="438" id="HKh-GP-t4M"/>
@@ -292,20 +292,42 @@
                                 <color key="textColor" red="0.98495999400000001" green="0.98495999400000001" blue="0.98495999400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contacticon" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-Gu-qaw" customClass="CustomizableImageView" customModule="Social_Connecting_App" customModuleProvider="target">
-                                <rect key="frame" x="128" y="161" width="118" height="108"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="uh0-im-Gv0" appends="YES" id="naP-XI-5ua"/>
-                                </connections>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Naf-4e-MJt">
+                                <rect key="frame" x="137.5" y="161" width="100" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-DB-efA">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OQJ-ne-mC2">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="contacticon" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-Gu-qaw" customClass="CustomizableImageView" customModule="Social_Connecting_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="50"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="uh0-im-Gv0" appends="YES" id="naP-XI-5ua"/>
+                                                        </connections>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="0HK-Gu-qaw" firstAttribute="centerX" secondItem="OQJ-ne-mC2" secondAttribute="centerX" id="8qm-3q-9YQ"/>
+                                                    <constraint firstItem="0HK-Gu-qaw" firstAttribute="top" secondItem="OQJ-ne-mC2" secondAttribute="top" constant="80" id="iqP-Mw-aJQ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4gl-DB-efA" firstAttribute="top" secondItem="Naf-4e-MJt" secondAttribute="top" constant="100" id="9Wb-TO-BMb"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.33640208739999999" green="0.75346822609999997" blue="0.55150670040000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -315,19 +337,16 @@
                             <constraint firstItem="ecT-IN-a8F" firstAttribute="top" secondItem="h7i-iF-5A8" secondAttribute="bottom" constant="36" id="B5N-bX-q7m"/>
                             <constraint firstItem="BL0-Em-27b" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="B7T-FG-cOR"/>
                             <constraint firstItem="SRM-oF-iqO" firstAttribute="leading" secondItem="oxt-jC-2sS" secondAttribute="leading" constant="10" id="Fz1-ct-uiS"/>
-                            <constraint firstItem="0HK-Gu-qaw" firstAttribute="top" secondItem="ecT-IN-a8F" secondAttribute="bottom" constant="8" id="Iqf-d6-fI8"/>
                             <constraint firstItem="SRM-oF-iqO" firstAttribute="top" secondItem="BL0-Em-27b" secondAttribute="bottom" constant="37" id="PCy-QC-KM9"/>
-                            <constraint firstItem="0HK-Gu-qaw" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="TZl-Wu-Xeo"/>
                             <constraint firstItem="SRM-oF-iqO" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="WMo-2d-Qzt"/>
                             <constraint firstAttribute="trailing" secondItem="SRM-oF-iqO" secondAttribute="trailing" constant="10" id="WZ5-1Z-Aqi"/>
                             <constraint firstAttribute="trailing" secondItem="BL0-Em-27b" secondAttribute="trailing" constant="10" id="Zjx-VM-Qt3"/>
                             <constraint firstAttribute="trailing" secondItem="ef5-sY-fOS" secondAttribute="trailing" constant="10" id="b1y-Nh-dZ9"/>
                             <constraint firstItem="ecT-IN-a8F" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="jta-X2-fzT"/>
                             <constraint firstItem="N9t-gx-HPd" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="rEU-rY-YL8"/>
-                            <constraint firstItem="ef5-sY-fOS" firstAttribute="top" secondItem="0HK-Gu-qaw" secondAttribute="bottom" constant="8" id="rlD-iJ-mXT"/>
                             <constraint firstItem="N9t-gx-HPd" firstAttribute="top" secondItem="SRM-oF-iqO" secondAttribute="bottom" constant="35" id="sRC-v0-Jjz"/>
                             <constraint firstItem="ef5-sY-fOS" firstAttribute="leading" secondItem="oxt-jC-2sS" secondAttribute="leading" constant="10" id="sWl-bn-OHW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0HK-Gu-qaw" secondAttribute="trailing" constant="56" id="z1v-wE-bF2"/>
+                            <constraint firstItem="Naf-4e-MJt" firstAttribute="centerX" secondItem="oxt-jC-2sS" secondAttribute="centerX" id="xUS-Tu-dMb"/>
                             <constraint firstItem="BL0-Em-27b" firstAttribute="top" secondItem="ef5-sY-fOS" secondAttribute="bottom" constant="31" id="z2M-6V-TlS"/>
                         </constraints>
                     </view>
